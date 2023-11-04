@@ -86,8 +86,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  height: 150px;
+  height: 300px;
   background-color: aqua;
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header__logo {
@@ -185,5 +192,42 @@ h1, h2, h3, h4, h5, h6 {
 @media (orientation: portrait) and (max-width: 300px)  {
   .header {
     background-color: red;
+  }
+}
+
+.header__circle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  animation: downUp 1s 2s infinite ease both reverse;
+
+  /*
+  animation-name: downUp;
+  animation-duration: 1s;
+  animation-delay: 0.5;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 
+  animation-direction: reverse;
+  2;*/
+
+}
+
+
+
+@keyframes downUp {
+  0% {
+    background: blue;
+  }
+
+  25%{
+    background: green;
+    border-radius: 0;
+  }
+
+
+  100% {
+    transform: translateY(100%);
   }
 }
